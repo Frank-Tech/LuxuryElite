@@ -14,7 +14,7 @@ const sections = [
   {
     id: "home",
     Component: Home,
-    background: "https://images.unsplash.com/photo-1481277542470-605612bd2d61",
+    background: "https://images.unsplash.com/photo-1536094919012-f5c6ecb4f64b",
   },
   {
     id: "services",
@@ -48,7 +48,7 @@ function App() {
     <div className="min-h-screen bg-black">
       <Navigation />
       <Suspense fallback={<div>Loading...</div>}>
-        <main className="scroll-smooth">
+        <main className="scroll-smooth pb-16"> {/* Added padding to account for footer */}
           {sections.map(({ id, Component, background }) => (
             <SectionContainer key={id} id={id} background={background}>
               <Component />

@@ -10,8 +10,8 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-black/90 py-8">
-      <div className="container mx-auto px-4">
+    <footer className="bg-black/90 backdrop-blur-sm border-t border-[#B8860B]/20">
+      <div className="container mx-auto px-4 h-16 flex items-center justify-center">
         <FadeIn>
           <div className="flex justify-center space-x-8">
             {socialLinks.map(({ icon: Icon, href, label }) => (

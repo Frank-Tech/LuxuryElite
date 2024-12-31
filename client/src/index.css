@@ -103,6 +103,13 @@
 
 section {
   scroll-margin-top: 0;
+  min-height: calc(100vh - 64px); /* Accounting for footer height */
+}
+
+/* Footer styles */
+footer {
+  @apply fixed bottom-0 left-0 right-0 z-50;
+  height: 64px;
 }
 
 /* Mobile optimization for scroll snapping */
