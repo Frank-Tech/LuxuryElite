@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "testimonials": "Testimonials",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Elite Concierge Services",
+    "subtitle": "Your Gateway to Luxury Living",
+    "cta": "Discover More"
+  },
+  "services": {
+    "title": "Our Premium Services",
+    "privateJets": {
+      "title": "Private Jets",
+      "description": "Experience seamless air travel with our exclusive fleet of private jets"
+    },
+    "luxuryCars": {
+      "title": "Luxury Cars",
+      "description": "Access to the world's finest automobiles at your convenience"
+    },
+    "yachts": {
+      "title": "Luxury Yachts",
+      "description": "Set sail in style with our curated selection of premium vessels"
+    },
+    "events": {
+      "title": "Event Planning",
+      "description": "Bespoke event planning services for unforgettable moments"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Your Message",
+      "submit": "Send Message"
+    }
+  }
+}
