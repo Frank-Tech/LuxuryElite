@@ -1,15 +1,17 @@
 import { useTranslation } from "react-i18next";
 import { FadeIn } from "@/components/animations/FadeIn";
+import myImage from '../../images/LOGO-01.jpg';
 
 export const Home = () => {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
   return (
     <section className="min-h-screen relative flex items-center justify-center">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1536094919012-f5c6ecb4f64b')",
+          backgroundImage: `url(${myImage})`,
           filter: "brightness(0.3)",
         }}
       />
