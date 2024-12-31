@@ -5,6 +5,9 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100%;
   }
 
   * {
@@ -12,7 +15,7 @@
   }
 
   body {
-    @apply font-sans antialiased bg-black text-gray-100;
+    @apply font-sans antialiased bg-black text-gray-100 h-full;
   }
 
   @font-face {
@@ -33,6 +36,24 @@
 .ltr {
   direction: ltr;
   text-align: left;
+}
+
+.section-container {
+  @apply min-h-screen w-full relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.section-background {
+  @apply absolute inset-0 bg-cover bg-center bg-no-repeat;
+  &::after {
+    content: '';
+    @apply absolute inset-0 bg-black/60 backdrop-blur-sm;
+  }
+}
+
+.section-content {
+  @apply relative z-10 h-full flex items-center justify-center;
 }
 
 .gold-text {
@@ -81,5 +102,12 @@
 }
 
 section {
-  scroll-margin-top: 4rem;
+  scroll-margin-top: 0;
+}
+
+/* Mobile optimization for scroll snapping */
+@media (max-width: 768px) {
+  html {
+    scroll-snap-type: y proximity;
+  }
 }
