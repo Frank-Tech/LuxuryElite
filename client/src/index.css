@@ -3,12 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   * {
     @apply border-border;
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-black text-gray-100;
   }
 
   @font-face {
@@ -32,13 +36,19 @@
 }
 
 .gold-text {
-  color: #B8860B;
+  @apply text-[#B8860B];
+}
+
+.gold-gradient {
+  background: linear-gradient(45deg, #B8860B, #DAA520);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .fade-in.visible {
@@ -47,15 +57,17 @@
 }
 
 .service-card {
-  transition: transform 0.3s ease-in-out;
+  @apply backdrop-blur-sm bg-white/5 border border-[#B8860B]/20;
+  transition: all 0.4s ease-in-out;
 }
 
 .service-card:hover {
+  @apply border-[#B8860B]/40 bg-white/10;
   transform: translateY(-5px);
 }
 
 .testimonial-carousel {
-  overflow: hidden;
+  @apply overflow-hidden;
 }
 
 .gallery-grid {
@@ -65,6 +77,9 @@
 }
 
 .contact-form {
-  max-width: 600px;
-  margin: 0 auto;
+  @apply max-w-xl mx-auto;
+}
+
+section {
+  scroll-margin-top: 4rem;
 }

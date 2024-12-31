@@ -1,4 +1,3 @@
-import { Switch, Route } from "wouter";
 import { Suspense } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Home } from "@/components/sections/Home";
@@ -7,6 +6,7 @@ import { About } from "@/components/sections/About";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Gallery } from "@/components/sections/Gallery";
 import { Contact } from "@/components/sections/Contact";
+import { Footer } from "@/components/Footer";
 import "./lib/i18n";
 
 function App() {
@@ -14,16 +14,28 @@ function App() {
     <>
       <Navigation />
       <Suspense fallback={<div>Loading...</div>}>
-        <Switch>
-          <Route path="/" component={Home} />
-          <Route path="/services" component={Services} />
-          <Route path="/about" component={About} />
-          <Route path="/testimonials" component={Testimonials} />
-          <Route path="/gallery" component={Gallery} />
-          <Route path="/contact" component={Contact} />
-          <Route>404 - Not Found</Route>
-        </Switch>
+        <main className="scroll-smooth">
+          <section id="home">
+            <Home />
+          </section>
+          <section id="services">
+            <Services />
+          </section>
+          <section id="about">
+            <About />
+          </section>
+          <section id="testimonials">
+            <Testimonials />
+          </section>
+          <section id="gallery">
+            <Gallery />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
+        </main>
       </Suspense>
+      <Footer />
     </>
   );
 }
